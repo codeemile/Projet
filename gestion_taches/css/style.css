@@ -1,0 +1,376 @@
+/* Variables */
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --border-color: #ddd;
+  }
+  
+  /* Base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .user-info {
+    font-size: 0.9em;
+  }
+  
+  /* Forms */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .form-actions {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-dark);
+    text-decoration: none;
+  }
+  
+  .btn-link {
+    margin-left: 15px;
+    color: var(--primary-color);
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+  }
+  
+  .btn-success {
+    background-color: var(--success-color);
+  }
+  
+  .btn-action {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+  }
+  
+  .btn-success {
+    background-color: var(--success-color);
+  }
+/* Tableau des tâches */
+.table-taches {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table-taches th,
+  .table-taches td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .table-taches th {
+    background-color: var(--light-gray);
+    font-weight: bold;
+  }
+  
+  .table-taches tr:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+  }
+  
+  /* Statuts des tâches */
+  .terminee {
+    background-color: rgba(46, 204, 113, 0.1);
+  }
+  
+  .retard {
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  /* Alertes */
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .alert.success {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+  }
+  
+  .alert.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #c0392b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+  }
+  
+  .alert.warning {
+    background-color: rgba(243, 156, 18, 0.2);
+    color: #d35400;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+  }
+  
+  .alert ul {
+    margin-left: 20px;
+  }
+  
+  /* Action zone */
+  .actions {
+    margin: 20px 0;
+  }
+  
+  /* Tri */
+  .tri {
+    margin: 15px 0;
+    font-size: 0.9em;
+  }
+  
+  .tri a {
+    margin: 0 5px;
+  }
+  
+  /* No tasks message */
+  .no-tasks {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  /* Media queries pour la responsivité */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .user-info {
+      margin-top: 10px;
+    }
+    
+    .table-taches thead {
+      display: none;
+    }
+    
+    .table-taches, 
+    .table-taches tbody, 
+    .table-taches tr, 
+    .table-taches td {
+      display: block;
+      width: 100%;
+    }
+    
+    .table-taches tr {
+      margin-bottom: 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+    }
+    
+    .table-taches td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .table-taches td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      font-weight: bold;
+    }
+    
+    .actions .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  /* Filtres */
+.filtres {
+    margin: 15px 0;
+    font-size: 0.9em;
+  }
+  
+  .filtres a {
+    margin: 0 5px;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+  
+  .filtres a.active {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Séparateur */
+  .separator {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  /* Info text */
+  .info {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+  
+  /* Notifications */
+  .notifications {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(243, 156, 18, 0.1);
+    border-left: 4px solid var(--warning-color);
+    border-radius: 4px;
+  }
+  .notifications h3 {
+    margin-top: 0;
+    color: var(--warning-color);
+  }
+  .notifications ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .notification {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+  }
+  .notification-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  /* Priorités */
+  .priorite-haute {
+    color: var(--danger-color);
+    font-weight: bold;
+  }
+  .priorite-normale {
+    color: var(--primary-color);
+  }
+  .priorite-basse {
+    color: #95a5a6;
+  }
+  /* Badge de priorité */
+  .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+  
+  .badge-haute {
+    background-color: var(--danger-color);
+  }
+  
+  .badge-normale {
+    background-color: var(--primary-color);
+  }
+  
+  .badge-basse {
+    background-color: #95a5a6;
+  }
